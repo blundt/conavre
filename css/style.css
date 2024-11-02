@@ -12,7 +12,7 @@ body {
     color: #333;
 }
 
-/* Estilo del encabezado */
+/* Header Styles */
 header {
     background: #333;
     color: #fff;
@@ -21,16 +21,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header img.logo {
+    height: 60px;
+    margin-left: 20px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
     margin-right: 10px;
 }
 
@@ -43,63 +49,225 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-header img.logo {
-    height: 60px; /* Ajusta el tamaño según tus necesidades */
-    margin-right: 20px;
+/* Hero Section Styles */
+#hero {
+    text-align: center;
+    background: #eee;
+    padding: 40px 20px;
 }
 
-/* Estilo del contenido principal */
-main {
-    padding: 20px;
-    background: #fff;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-p {
+#hero img.hero-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
     margin-bottom: 20px;
 }
 
-/* Estilo del formulario de contacto */
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
+#hero h1 {
+    font-size: 2.5em;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
 }
 
-form button {
+#hero p {
+    font-size: 1.2em;
+}
+
+/* Services Section Styles */
+#services {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    margin-bottom: 20px;
+}
+
+.service {
     display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+}
+
+.service h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.service p {
+    font-size: 1em;
+}
+
+/* Gallery Section Styles */
+#gallery {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#gallery h2 {
+    margin-bottom: 20px;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Call to Action Section Styles */
+#cta {
     background: #333;
     color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#cta h2 {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff7e5f;
+    color: #fff;
     padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
 }
 
-form button:hover {
-    background: #555;
+.btn:hover {
+    background: #feb47b;
 }
 
-/* Estilo del pie de página */
+/* Map Section Styles */
+#map {
+    background: #eee;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#map h2 {
+    margin-bottom: 20px;
+}
+
+#map iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+/* Footer Styles */
 footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* About Section Styles */
+#about {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* History Section Styles */
+#history {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#history h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#history p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .service, .gallery-item {
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    #about h2, #history h2 {
+        font-size: 1.5em;
+    }
+
+    #about p, #history p {
+        font-size: 1em;
+    }
+}
+
+
