@@ -467,6 +467,135 @@ footer .social-media a:hover {
     border: 0;
     margin: 0 auto;
 }
+/* Notification Section Styles */
+#notification {
+    background: #ffebcc;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ffc107;
+    margin-bottom: 20px;
+}
+
+#notification h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ff9800;
+}
+
+#notification p {
+    font-size: 1.2em;
+    color: #ff9800;
+}
+
+/* Services List Section Styles */
+#services-list {
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#services-list h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#services-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#services-list ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Contact Section Styles */
+#contact {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    text-align: left;
+}
+
+#contact form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact form input[required]:invalid {
+    border-color: red;
+}
+
+#contact form input[required]:valid {
+    border-color: green;
+}
+
+#contact form button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background: #555;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+#contact iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+    margin: 0 auto;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -563,19 +692,24 @@ footer .social-media a:hover {
     #contact p {
         font-size: 1em;
     }
-    #contact form,
-    #contact iframe {
-        width: 90%;
-    }
 
-    #contact h2 {
+    #notification h2 {
         font-size: 1.5em;
     }
 
-    #contact p {
+    #notification p {
+        font-size: 1em;
+    }
+
+    #services-list h2 {
+        font-size: 1.5em;
+    }
+
+    #services-list ul li {
         font-size: 1em;
     }
 }
+
 
 
 
