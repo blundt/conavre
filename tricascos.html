@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trimaranes - Conavre</title>
+    <title>Tricascos - Conavre</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,27 +22,29 @@
         </nav>
     </header>
     <main>
-        <section id="trimaranes">
-            <h2>Trimaranes</h2>
-            <div class="product-list">
+        <section id="tricascos">
+            <h2>Tricascos</h2>
+            <div class="products-container">
                 <div class="product">
-                    <img src="img/trimaran-cVII-9.6.jpg" alt="Trimaran C-VII-9.6">
                     <h3>Trimaran C-VII-9.6</h3>
                     <p>Descripción breve del Trimaran C-VII-9.6.</p>
+                    <button class="toggle-btn" onclick="toggleVisibility('catalog-t1')">Ver/Ocultar Catálogo</button>
+                    <iframe id="catalog-t1" src="catalogos/T-1.pdf" width="100%" height="500px" style="display:none;"></iframe>
                 </div>
                 <div class="product">
-                    <img src="img/trimaran-cVII-10.5.jpg" alt="Trimaran C-VII-10.5">
                     <h3>Trimaran C-VII-10.5</h3>
                     <p>Descripción breve del Trimaran C-VII-10.5.</p>
+                    <button class="toggle-btn" onclick="toggleVisibility('catalog-t2')">Ver/Ocultar Catálogo</button>
+                    <iframe id="catalog-t2" src="catalogos/T-2.pdf" width="100%" height="500px" style="display:none;"></iframe>
                 </div>
                 <div class="product">
-                    <img src="img/trimaran-cVII-15.4.jpg" alt="Trimaran C-VII-15.4">
                     <h3>Trimaran C-VII-15.4</h3>
                     <p>Descripción breve del Trimaran C-VII-15.4.</p>
+                    <button class="toggle-btn" onclick="toggleVisibility('catalog-t3')">Ver/Ocultar Catálogo</button>
+                    <iframe id="catalog-t3" src="catalogos/T-3.pdf" width="100%" height="500px" style="display:none;"></iframe>
                 </div>
             </div>
-            <!-- Botón para volver a Productos -->
-            <a href="products.html" class="btn">Volver a Productos</a>
+            <a href="products.html" class="btn-back">Volver a Productos</a>
         </section>
     </main>
     <footer>
@@ -55,4 +57,3 @@
     <script src="js/main.js"></script>
 </body>
 </html>
-

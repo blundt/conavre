@@ -143,20 +143,6 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.btn {
-    display: inline-block;
-    background: #ff7e5f;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin: 10px;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background: #feb47b;
-}
-
 /* Map Section Styles */
 #map {
     background: #eee;
@@ -260,18 +246,45 @@ footer .social-media a:hover {
     gap: 15px;
 }
 
-.product-categories .btn {
+/* General Button Styles */
+.btn {
     display: inline-block;
-    background: #ff7e5f;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+.product-categories .btn {
+    background: #333;
+}
+
+.product-categories .btn:hover {
+    background: #555;
+}
+
+.btn-back {
+    display: inline-block;
+    background: #333;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
-.product-categories .btn:hover {
-    background: #feb47b;
+.btn-back:hover {
+    background: #555;
 }
+
 
 /* Subpage Product List Styles */
 .product-list {
@@ -304,21 +317,6 @@ footer .social-media a:hover {
 .product p {
     font-size: 1em;
     color: #555;
-}
-
-/* Back to Products Button */
-.btn-back {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.btn-back:hover {
-    background: #555;
 }
 
 /* Services Section Styles */
@@ -372,7 +370,7 @@ footer .social-media a:hover {
     font-size: 1em;
     color: #555;
 }
-/* Contact Section Styles */
+
 /* Contact Section Styles */
 #contact {
     background: #fff;
@@ -596,6 +594,72 @@ footer .social-media a:hover {
     margin: 0 auto;
 }
 
+/* Products Section Styles */
+#monocascos,
+#tricascos,
+#veleros,
+#botes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px; /* Añadido para separar del pie de página */
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.product {
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Añadido para separar productos */
+}
+
+.product h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.toggle-btn {
+    display: inline-block;
+    margin-bottom: 10px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.toggle-btn:hover {
+    background: #555;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     header {
@@ -717,7 +781,26 @@ footer .social-media a:hover {
     #notification, #services-list, #contact {
         padding: 20px 10px;
     }
+    #monocascos {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product {
+        flex: 1 1 100%;
+    }
+
+    .products-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product {
+        flex: 1 1 100%;
+    }
 }
+
+
 
 
 
