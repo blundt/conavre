@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras y Componentes - Conavre</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/logo.png" alt="Conavre Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="estructuras_componentes">
+            <h2>Estructuras y Componentes</h2>
+            <div class="products-container">
+                <div class="product">
+                    <h3>Refugio de Nieve Modular</h3>
+                    <p>Descripción breve del Refugio de Nieve Modular.</p>
+                    <button class="toggle-btn" onclick="toggleVisibility('catalog-ec1')">Ver/Ocultar Catálogo</button>
+                    <iframe id="catalog-ec1" src="catalogos/Refugio_Nieve_Modular.pdf" width="100%" height="500px" style="display:none;"></iframe>
+                </div>
+            </div>
+            <a href="products.html" class="btn-back">Volver a Productos</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Conavre. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

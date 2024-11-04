@@ -598,7 +598,8 @@ footer .social-media a:hover {
 #monocascos,
 #tricascos,
 #veleros,
-#botes {
+#botes,
+#estructuras_componentes {
     display: flex;
     flex-direction: column;
     align-items: center;
