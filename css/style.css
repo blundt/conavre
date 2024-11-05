@@ -341,16 +341,14 @@ footer .social-media a:hover {
 
 .service-list {
     display: flex;
-    justify-content: space-between;  /* Asegura que los servicios se distribuyan horizontalmente */
-    flex-wrap: nowrap;  /* Evita que los servicios se vayan a la siguiente línea */
+    justify-content: space-between;
     gap: 20px;
     padding: 20px 0;
+    flex-wrap: wrap; /* Permite que los servicios se ajusten a varias líneas en pantallas más pequeñas */
 }
 
 .service {
-    flex: 1;  /* Permite que cada servicio ocupe el mismo espacio horizontal */
-    max-width: 30%;  /* Asegura que no crezcan demasiado */
-    height: 400px;  /* Fija la altura de los cuadros de servicio */
+    flex: 1 1 calc(33.333% - 20px); /* Permite que cada servicio ocupe un tercio del ancho disponible */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     background: #fff;
@@ -358,14 +356,16 @@ footer .social-media a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 400px;
+    margin-bottom: 20px;
 }
 
 .service img {
     flex-grow: 1;
     width: 100%;
     height: auto;
-    object-fit: cover;  /* Asegura que la imagen cubra el cuadro de manera uniforme */
-    max-height: 200px;  /* Fija la altura máxima de la imagen */
+    object-fit: cover;
+    max-height: 200px;
 }
 
 .service h3 {
@@ -377,6 +377,19 @@ footer .social-media a:hover {
 .service p {
     font-size: 1em;
     color: #555;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .service {
+        flex: 1 1 100%; /* Cambia a una columna en pantallas más pequeñas */
+    }
+}
+
+@media (min-width: 769px) {
+    .service-list {
+        flex-wrap: nowrap; /* Asegura que los servicios no se ajusten en varias líneas en pantallas grandes */
+    }
 }
 
 /* Contact Section Styles */
