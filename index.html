@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio | Conavre</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script> <!-- Asegúrate de incluir el script -->
 </head>
 <body>
     <header>
@@ -32,29 +33,43 @@
         <!-- Servicios Destacados -->
         <section id="services">
             <h2>Nuestros Servicios</h2>
-            <div class="service">
-                <img src="img/DE0.jpg" alt="Fabricación de Embarcaciones">
-                <h3>Fabricación de Embarcaciones</h3>
-                <p>Desarrollamos embarcaciones duraderas y de alta calidad.</p>
-            </div>
-            <div class="service">
-                <img src="img/service2.jpg" alt="Reparación de Barcos de Fibra de Vidrio">
-                <h3>Reparación de Barcos de Fibra de Vidrio</h3>
-                <p>Expertos en reparación de embarcaciones de fibra de vidrio.</p>
-            </div>
-            <div class="service">
-                <img src="img/RN00.jpg" alt="Estructuras y Componentes">
-                <h3>Estructuras y Componentes</h3>
-                <p>Especializados en la fabricación de refugios de nieve, estanques, casetas de guardia y puentes de mando.</p>
+            <div class="service-list">
+                <div class="service">
+                    <img src="img/DE0.jpg" alt="Fabricación de Embarcaciones">
+                    <h3>Fabricación de Embarcaciones</h3>
+                    <p>Desarrollamos embarcaciones duraderas y de alta calidad.</p>
+                </div>
+                <div class="service">
+                    <img src="img/service2.jpg" alt="Reparación de Barcos de Fibra de Vidrio">
+                    <h3>Reparación de Barcos de Fibra de Vidrio</h3>
+                    <p>Expertos en reparación de embarcaciones. </p>
+                </div>
+                <div class="service">
+                    <img src="img/RN00.jpg" alt="Estructuras y Componentes">
+                    <h3>Estructuras y Componentes</h3>
+                    <p>Especializados en la fabricación de estructuras en fibra de vidrio.</p>
+                </div>
             </div>
         </section>
         
         <!-- Galería de Imágenes -->
         <section id="gallery">
             <h2>Galería de Proyectos</h2>
-            <div class="gallery-item"><img src="img/gallery1.jpg" alt="Proyecto 1"></div>
-            <div class="gallery-item"><img src="img/gallery2.jpg" alt="Proyecto 2"></div>
-            <div class="gallery-item"><img src="img/gallery3.jpg" alt="Proyecto 3"></div>
+            <div class="gallery-item">
+                <img src="img/gallery1-1.jpg" alt="Proyecto 1" id="gallery1">
+                <button class="prev" onclick="prevImage('gallery1')">&#10094;</button>
+                <button class="next" onclick="nextImage('gallery1')">&#10095;</button>
+            </div>
+            <div class="gallery-item">
+                <img src="img/gallery2-1.jpg" alt="Proyecto 2" id="gallery2">
+                <button class="prev" onclick="prevImage('gallery2')">&#10094;</button>
+                <button class="next" onclick="nextImage('gallery2')">&#10095;</button>
+            </div>
+            <div class="gallery-item">
+                <img src="img/gallery3-1.jpg" alt="Proyecto 3" id="gallery3">
+                <button class="prev" onclick="prevImage('gallery3')">&#10094;</button>
+                <button class="next" onclick="nextImage('gallery3')">&#10095;</button>
+            </div>
         </section>
         
         <!-- Botones de Llamada a la Acción -->
@@ -90,3 +105,4 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
