@@ -21,16 +21,31 @@ const currentIndex = {
     gallery3: 0
 };
 
+// Variable para los intervalos automáticos
+let autoSwitchInterval = null;
+
 // Función para mostrar la imagen anterior
 function prevImage(galleryId) {
     currentIndex[galleryId] = (currentIndex[galleryId] - 1 + galleryImages[galleryId].length) % galleryImages[galleryId].length;
     document.getElementById(galleryId).src = galleryImages[galleryId][currentIndex[galleryId]];
+    resetAutoSwitch(galleryId);
 }
 
 // Función para mostrar la imagen siguiente
 function nextImage(galleryId) {
     currentIndex[galleryId] = (currentIndex[galleryId] + 1) % galleryImages[galleryId].length;
     document.getElementById(galleryId).src = galleryImages[galleryId][currentIndex[galleryId]];
+    resetAutoSwitch(galleryId);
+}
+
+// Función para reiniciar el cambio automático de imágenes
+function resetAutoSwitch(galleryId) {
+    if (autoSwitchInterval) {
+        clearInterval(autoSwitchInterval);
+    }
+    autoSwitchInterval = setInterval(() => {
+        nextImage(galleryId);
+    }, 3000);
 }
 
 // Asegurar que el evento click funcione correctamente en dispositivos móviles
@@ -51,4 +66,10 @@ document.getElementById('menu-toggle').addEventListener('click', function () {
     const nav = document.getElementById('main-nav').getElementsByTagName('ul')[0];
     nav.classList.toggle('show');
 });
+
+// Iniciar el cambio automático de imágenes al cargar la página
+Object.keys(galleryImages).forEach(galleryId => {
+    resetAutoSwitch(galleryId);
+});
+
 
