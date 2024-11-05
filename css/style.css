@@ -34,6 +34,7 @@ nav ul {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav ul li {
@@ -41,12 +42,48 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #fff; /* Asegura que el texto del menú sea blanco */
     text-decoration: none;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* Estilos para el botón de menú */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff; /* Cambia el color del ícono de la hamburguesa a blanco */
+}
+
+/* Media Query para Pantallas Pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    #main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333; /* Fondo oscuro para el menú desplegable */
+    }
+    
+    #main-nav ul.show {
+        display: flex;
+    }
+
+    #main-nav ul li {
+        margin: 10px 0;
+    }
+
+    #main-nav ul li a {
+        color: #fff; /* Asegura que el texto sea blanco en el menú desplegable */
+    }
 }
 
 /* Hero Section Styles */

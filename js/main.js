@@ -45,3 +45,10 @@ document.querySelectorAll('.prev, .next').forEach(button => {
         }
     });
 });
+
+// Código para el menú tipo "hamburguesa" en dispositivos móviles
+document.getElementById('menu-toggle').addEventListener('click', function () {
+    const nav = document.getElementById('main-nav').getElementsByTagName('ul')[0];
+    nav.classList.toggle('show');
+});
+
