@@ -11,14 +11,26 @@ function toggleVisibility(id) {
 const galleryImages = {
     gallery1: ["img/gallery1-1.jpg", "img/gallery1-2.jpg", "img/gallery1-3.jpg", "img/gallery1-4.jpg", "img/gallery1-5.jpg", "img/gallery1-6.jpg", "img/gallery1-7.jpg", "img/gallery1-8.jpg", "img/gallery1-9.jpg", "img/gallery1-10.jpg", "img/gallery1-11.jpg", "img/gallery1-12.jpg", "img/gallery1-13.jpg", "img/gallery1-14.jpg"],
     gallery2: ["img/gallery2-1.jpg", "img/gallery2-2.jpg", "img/gallery2-3.jpg", "img/gallery2-4.jpg", "img/gallery2-5.jpg", "img/gallery2-6.jpg", "img/gallery2-7.jpg", "img/gallery2-8.jpg", "img/gallery2-9.jpg"],
-    gallery3: ["img/gallery3-1.jpg", "img/gallery3-2.jpg", "img/gallery3-3.jpg", "img/gallery3-4.jpg", "img/gallery3-5.jpg", "img/gallery3-6.jpg", "img/gallery3-7.jpg", "img/gallery3-8.jpg", "img/gallery3-9.jpg"]
+    gallery3: ["img/gallery3-1.jpg", "img/gallery3-2.jpg", "img/gallery3-3.jpg", "img/gallery3-4.jpg", "img/gallery3-5.jpg", "img/gallery3-6.jpg", "img/gallery3-7.jpg", "img/gallery3-8.jpg", "img/gallery3-9.jpg"],
+    gallery4: ["img/service1-1.jpg", "img/service1-2.jpg", "img/service1-3.jpg", "img/service1-4.jpg", "img/service1-5.jpg", "img/service1-6.jpg", "img/service1-7.jpg"],
+    gallery5: ["img/service2-1.jpg", "img/service2-2.jpg", "img/service2-3.jpg", "img/service2-4.jpg", "img/service2-5.jpg", "img/service2-6.jpg"],
+    gallery6: ["img/service3-1.jpg", "img/service3-2.jpg", "img/service3-3.jpg", "img/service3-4.jpg", "img/service3-5.jpg", "img/service3-6.jpg", "img/service3-7.jpg"],
+    gallery7: ["img/service4-1.jpg", "img/service4-2.jpg", "img/service4-3.jpg", "img/service4-4.jpg", "img/service4-5.jpg", "img/service4-6.jpg", "img/service4-7.jpg"],
+    gallery8: ["img/service5-1.jpg", "img/service5-2.jpg", "img/service5-3.jpg", "img/service5-4.jpg", "img/service5-5.jpg", "img/service5-6.jpg", "img/service5-7.jpg", "img/service5-8.jpg"],
+    gallery9: ["img/service6-1.jpg", "img/service6-2.jpg", "img/service6-3.jpg", "img/service6-4.jpg"]
 };
 
 // Índice actual de la imagen mostrada
 const currentIndex = {
     gallery1: 0,
     gallery2: 0,
-    gallery3: 0
+    gallery3: 0,
+    gallery4: 0,
+    gallery5: 0,
+    gallery6: 0,
+    gallery7: 0,
+    gallery8: 0,
+    gallery9: 0
 };
 
 // Variable para los intervalos automáticos
@@ -71,5 +83,3 @@ document.getElementById('menu-toggle').addEventListener('click', function () {
 Object.keys(galleryImages).forEach(galleryId => {
     resetAutoSwitch(galleryId);
 });
-
-

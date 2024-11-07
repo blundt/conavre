@@ -19,15 +19,13 @@
 }
 
 .service-list {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cambia a un diseño de cuadrícula */
     gap: 20px;
     padding: 20px 0;
-    flex-wrap: wrap; /* Permite que los servicios se ajusten a varias líneas en pantallas más pequeñas */
 }
 
 .service {
-    flex: 1 1 calc(33.333% - 20px); /* Permite que cada servicio ocupe un tercio del ancho disponible */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     background: #fff;
@@ -36,37 +34,53 @@
     flex-direction: column;
     justify-content: space-between;
     height: 400px;
-    margin-bottom: 20px;
 }
 
-.service img {
-    flex-grow: 1;
+.gallery-item {
+    position: relative;
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-height: 200px;
+    height: 200px; /* Establece una altura fija para el contenedor de la imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobrepase el contenedor */
 }
 
-.service h3 {
-    margin-top: 15px;
-    font-size: 1.5em;
-    color: #333;
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Asegura que toda la imagen sea visible sin recortes */
+    object-position: center; /* Centra la imagen dentro del contenedor */
 }
 
-.service p {
-    font-size: 1em;
-    color: #555;
+.gallery-item button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.gallery-item .prev {
+    left: 10px;
+}
+
+.gallery-item .next {
+    right: 10px;
 }
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
     .service-list {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
     }
 
-    .service {
-        flex: 1 1 100%; /* Cambia a una columna en pantallas más pequeñas */
-        margin-bottom: 20px;
+    .gallery-item {
+        height: 150px; /* Ajusta la altura en dispositivos más pequeños */
+    }
+
+    .gallery-item button {
+        top: 50%;
     }
 }
