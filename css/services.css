@@ -1,0 +1,72 @@
+/* Services Section Styles */
+#services {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#services p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    flex-wrap: wrap; /* Permite que los servicios se ajusten a varias líneas en pantallas más pequeñas */
+}
+
+.service {
+    flex: 1 1 calc(33.333% - 20px); /* Permite que cada servicio ocupe un tercio del ancho disponible */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.service img {
+    flex-grow: 1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.service h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.service p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        flex: 1 1 100%; /* Cambia a una columna en pantallas más pequeñas */
+        margin-bottom: 20px;
+    }
+}

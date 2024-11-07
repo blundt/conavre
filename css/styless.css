@@ -1,0 +1,902 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header img.logo {
+    height: 60px;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff; /* Asegura que el texto del menú sea blanco */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el botón de menú */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff; /* Cambia el color del ícono de la hamburguesa a blanco */
+}
+
+/* Media Query para Pantallas Pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    #main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333; /* Fondo oscuro para el menú desplegable */
+    }
+    
+    #main-nav ul.show {
+        display: flex;
+    }
+
+    #main-nav ul li {
+        margin: 10px 0;
+    }
+
+    #main-nav ul li a {
+        color: #fff; /* Asegura que el texto sea blanco en el menú desplegable */
+    }
+}
+
+/* Hero Section Styles */
+#hero {
+    text-align: center;
+    background: #eee;
+    padding: 40px 20px;
+}
+
+#hero img.hero-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+}
+
+/* Services Section Styles */
+#services {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    margin-bottom: 20px;
+}
+
+.service {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+}
+
+.service h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.service p {
+    font-size: 1em;
+}
+
+/* Gallery Section Styles */
+#gallery {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#gallery h2 {
+    margin-bottom: 20px;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Call to Action Section Styles */
+#cta {
+    background: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#cta h2 {
+    margin-bottom: 20px;
+}
+
+/* Map Section Styles */
+#map {
+    background: #eee;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#map h2 {
+    margin-bottom: 20px;
+}
+
+#map iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* About Section Styles */
+#about {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* History Section Styles */
+#history {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#history h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#history p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Products Section Styles */
+#products {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#products p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.product-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* General Button Styles */
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+.product-categories .btn {
+    background: #333;
+}
+
+.product-categories .btn:hover {
+    background: #555;
+}
+
+.btn-back {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-back:hover {
+    background: #555;
+}
+
+
+/* Subpage Product List Styles */
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.product {
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.product p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Services Section Styles */
+#services {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#services p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    flex-wrap: wrap; /* Permite que los servicios se ajusten a varias líneas en pantallas más pequeñas */
+}
+
+.service {
+    flex: 1 1 calc(33.333% - 20px); /* Permite que cada servicio ocupe un tercio del ancho disponible */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.service img {
+    flex-grow: 1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.service h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.service p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .service {
+        flex: 1 1 100%; /* Cambia a una columna en pantallas más pequeñas */
+    }
+}
+
+@media (min-width: 769px) {
+    .service-list {
+        flex-wrap: nowrap; /* Asegura que los servicios no se ajusten en varias líneas en pantallas grandes */
+    }
+}
+
+/* Contact Section Styles */
+#contact {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    text-align: left;
+}
+
+#contact form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact form input[required]:invalid {
+    border-color: red;
+}
+
+#contact form input[required]:valid {
+    border-color: green;
+}
+
+.phone-input {
+    display: flex;
+    gap: 10px;
+}
+
+#contact form select {
+    width: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact form button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background: #555;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+#contact iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+    margin: 0 auto;
+}
+/* Notification Section Styles */
+#notification {
+    background: #ffebcc;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ffc107;
+    margin-bottom: 20px;
+}
+
+#notification h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ff9800;
+}
+
+#notification p {
+    font-size: 1.2em;
+    color: #ff9800;
+}
+
+/* Services List Section Styles */
+#services-list {
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#services-list h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#services-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#services-list ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Contact Section Styles */
+#contact {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    text-align: left;
+}
+
+#contact form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact form input[required]:invalid {
+    border-color: red;
+}
+
+#contact form input[required]:valid {
+    border-color: green;
+}
+
+#contact form button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background: #555;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+#contact iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+    margin: 0 auto;
+}
+
+/* Products Section Styles */
+#monocascos,
+#tricascos,
+#veleros,
+#botes,
+#estructuras_componentes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px; /* Añadido para separar del pie de página */
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.product {
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Añadido para separar productos */
+}
+
+.product h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.toggle-btn {
+    display: inline-block;
+    margin-bottom: 10px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.toggle-btn:hover {
+    background: #555;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.gallery-item {
+    position: relative;
+    width: 300px; /* Ajusta este valor según tus necesidades */
+    height: 200px; /* Ajusta este valor según tus necesidades */
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se adapte al tamaño del marco */
+}
+
+.gallery-item .prev, .gallery-item .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.gallery-item .prev {
+    left: 10px;
+}
+
+.gallery-item .next {
+    right: 10px;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img.logo {
+        margin: 0 auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .service, .gallery-item {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    #about h2, #history h2 {
+        font-size: 1.5em;
+    }
+
+    #about p, #history p {
+        font-size: 1em;
+    }
+
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #products h2 {
+        font-size: 1.5em;
+    }
+
+    #products p {
+        font-size: 1em;
+    }
+
+    .product-categories {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-categories .btn, .btn-back {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #services h2 {
+        font-size: 1.5em;
+    }
+
+    #services p {
+        font-size: 1em;
+    }
+
+    #contact form,
+    #contact iframe {
+        width: 90%;
+    }
+
+    #contact h2 {
+        font-size: 1.5em;
+    }
+
+    #contact p {
+        font-size: 1em;
+    }
+
+    #notification h2 {
+        font-size: 1.5em;
+    }
+
+    #notification p {
+        font-size: 1em;
+    }
+
+    #services-list h2 {
+        font-size: 1.5em;
+    }
+
+    #services-list ul li {
+        font-size: 1em;
+    }
+
+    #notification, #services-list, #contact {
+        padding: 20px 10px;
+    }
+    #monocascos {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product {
+        flex: 1 1 100%;
+    }
+
+    .products-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+
+
+
+
+
+

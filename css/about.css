@@ -1,0 +1,52 @@
+/* About Section Styles */
+#about {
+    background: #fff;
+    padding: 40px 20px;
+}
+
+#about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* Centra los títulos */
+}
+
+#about p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify; /* Justifica el texto */
+}
+
+/* History Section Styles */
+#history {
+    background: #f9f9f9;
+    padding: 40px 20px;
+}
+
+#history h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* Centra los títulos */
+}
+
+#history p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify; /* Justifica el texto */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #about h2, #history h2 {
+        font-size: 1.5em;
+    }
+
+    #about p, #history p {
+        font-size: 1em;
+    }
+}

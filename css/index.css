@@ -1,0 +1,218 @@
+/* Hero Section Styles */
+#hero {
+    text-align: center;
+    background: #eee;
+    padding: 40px 20px;
+}
+
+#hero img.hero-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+}
+
+/* Services Section Styles */
+#services {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#services p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    flex-wrap: wrap; /* Permite que los servicios se ajusten a varias líneas en pantallas más pequeñas */
+}
+
+.service {
+    flex: 1 1 calc(33.333% - 20px); /* Permite que cada servicio ocupe un tercio del ancho disponible */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.service img {
+    flex-grow: 1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.service h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.service p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Gallery Section Styles */
+#gallery {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#gallery h2 {
+    margin-bottom: 20px;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    position: relative;
+    vertical-align: top; /* Alinea los elementos inline-block al tope */
+    text-align: center;
+}
+
+.gallery-item img {
+    width: auto; /* Permite que las imágenes mantengan su proporción */
+    height: auto; /* Permite que las imágenes mantengan su proporción */
+    max-height: 200px; /* Ajusta la altura máxima de las imágenes */
+    max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    margin: 0 auto; /* Centra horizontalmente las imágenes */
+}
+
+.gallery-item button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.gallery-item .prev {
+    left: 10px;
+}
+
+.gallery-item .next {
+    right: 10px;
+}
+
+/* Call to Action Section Styles */
+#cta {
+    background: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#cta h2 {
+    margin-bottom: 20px;
+}
+
+#cta .btn {
+    display: inline-block;
+    background: #fff;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+#cta .btn:hover {
+    background: #555;
+    color: #fff;
+}
+
+/* Map Section Styles */
+#map {
+    background: #eee;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#map h2 {
+    margin-bottom: 20px;
+}
+
+#map iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    #cta .btn {
+        margin: 10px 0;
+    }
+
+    #map iframe {
+        max-width: 100%;
+    }
+    #gallery h2 {
+        font-size: 1.5em;
+    }
+
+    .gallery-item {
+        width: 90%;
+        margin: 10px auto;
+        display: block; /* Cambia a block para pantallas pequeñas */
+    }
+
+    .gallery-item img {
+        max-height: 150px; /* Ajusta la altura máxima en dispositivos más pequeños */
+    }
+}
