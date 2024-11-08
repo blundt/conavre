@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros | Conavre</title>
+    <title>Contacto | Conavre</title>
     <link rel="icon" type="image/png" href="img/fabicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
@@ -32,41 +32,49 @@
             <h2>Contacto</h2>
             <p>Para más información o consultas, no dudes en ponerte en contacto con nosotros a través del siguiente formulario:</p>
             <form action="php/enviar_formulario.php" method="post">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Empresa (opcional):</label>
+                    <input type="text" id="company" name="company">
+                </div>
                 
-                <label for="surname">Apellido:</label>
-                <input type="text" id="surname" name="surname" required>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="title_text">Título del Texto:</label>
+                    <input type="text" id="title_text" name="title_text" required>
+                </div>
                 
-                <label for="company">Empresa (opcional):</label>
-                <input type="text" id="company" name="company">
-                
-                <label for="phone">Número de Teléfono:</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{9}" title="Debe contener 9 números" required>
-                
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
                 
                 <button type="submit">Enviar</button>
             </form>
-            <p>También puedes contactarnos a través de los siguientes medios:</p>
-            <ul>
-                <li>Dirección: Av. Concon-Quintero Km2 - Parque Industrial Aconcagua, Lote #4, Quintero, Valparaíso</li>
-                <li>WhatsApp: +56 9 3362 0414</li>
-                <li>Email: contacto@conavre.com</li>
-            </ul>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1934.8836985658593!2d-71.49421708855883!3d-32.91336405524258!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689c3446b8ae9b3%3A0xa3277886227fd769!2sASTILLERO%20CONAVRE!5e0!3m2!1ses!2scl!4v1730324040725!5m2!1ses!2scl" 
-                width="600" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <div class="contact-info">
+                <ul>
+                    <li>Dirección: Av. Concon-Quintero Km2 - Parque Industrial Aconcagua, Lote #4, Quintero, Valparaíso</li>
+                    <li>WhatsApp: +56 9 3362 0414</li>
+                    <li>Email: contacto@conavre.com</li>
+                </ul>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1934.8836985658593!2d-71.49421708855883!3d-32.91336405524258!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689c3446b8ae9b3%3A0xa3277886227fd769!2sASTILLERO%20CONAVRE!5e0!3m2!1ses!2scl!4v1730324040725!5m2!1ses!2scl" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </section>
     </main>
     <footer>
@@ -84,3 +92,5 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+
