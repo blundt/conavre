@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros | Conavre</title>
+    <title>Tricascos | Conavre</title>
     <link rel="icon" type="image/png" href="img/fabicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/products.css">
     <script src="js/main.js" defer></script>
+    <style>
+        /* Estilos adicionales para la página de Tricascos */
+
+        /* Centrar y estilizar la descripción general */
+        .description {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 800px;
+            line-height: 1.6;
+            font-size: 1.2em;
+            color: #555;
+            padding-bottom: 20px; /* Espaciado adicional debajo de la descripción */
+        }
+
+        /* Espaciado entre el título y la descripción */
+        #tricascos h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Espaciado entre la descripción y los productos */
+        #tricascos .products-container {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,22 +54,23 @@
     <main>
         <section id="tricascos">
             <h2>Tricascos</h2>
+            <p class="description">
+                La línea C-VII corresponde a trimaranes tipo catedral que destacan por su velocidad y estabilidad,
+                perfectos para transporte de pasajeros y prestación de servicios.
+            </p>
             <div class="products-container">
                 <div class="product">
                     <h3>Trimaran C-VII-9.6</h3>
-                    <p>El C-VII-9.6, un trimarán tipo catedral de 9.6m, alcanza altas velocidades y mantiene una excelente estabilidad con mínima escora al virar.</p>
                     <button class="toggle-btn" onclick="toggleVisibility('catalog-t1')">Ver/Ocultar Catálogo</button>
                     <iframe id="catalog-t1" src="catalogos/C-VII-9.6.pdf" width="100%" height="500px" style="display:none;"></iframe>
                 </div>
                 <div class="product">
                     <h3>Trimaran C-VII-10.5</h3>
-                    <p>Descripción breve del Trimaran C-VII-10.4.</p>
                     <button class="toggle-btn" onclick="toggleVisibility('catalog-t2')">Ver/Ocultar Catálogo</button>
                     <iframe id="catalog-t2" src="catalogos/C-VII-10.4.pdf" width="100%" height="500px" style="display:none;"></iframe>
                 </div>
                 <div class="product">
                     <h3>Trimaran C-VII-15.4</h3>
-                    <p>Descripción breve del Trimaran C-VII-15.2.</p>
                     <button class="toggle-btn" onclick="toggleVisibility('catalog-t3')">Ver/Ocultar Catálogo</button>
                     <iframe id="catalog-t3" src="catalogos/C-VII-15.2.pdf" width="100%" height="500px" style="display:none;"></iframe>
                 </div>
@@ -68,4 +93,3 @@
     <script src="js/main.js"></script>
 </body>
 </html>
-
