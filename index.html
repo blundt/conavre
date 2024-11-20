@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="img/fabicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/main.js" defer></script> <!-- Asegúrate de incluir el script -->
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -27,17 +27,22 @@
             </ul>
         </nav>
     </header>
-</body>
-</html>
-
     <main>
         <!-- Encabezado Atractivo -->
         <section id="hero">
             <img src="img/hero-image.jpg" alt="Imagen Principal" class="hero-image">
             <h1>Bienvenidos a Conavre</h1>
-            <p>Expertos en construcción y reparación en fibra de vidrio</p>
+            <p>Construcción Naval y Reparaciones</p>
+            <button id="open-btn" class="cta-button">Ver Video</button>
+            <div id="video-container" class="hidden">
+                <video controls id="video-player">
+                    <source src="videos/C_IV.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
         </section>
         
+               
         <!-- Servicios Destacados -->
         <section id="services">
             <h2>Nuestros Servicios</h2>
@@ -50,7 +55,7 @@
                 <div class="service">
                     <img src="img/gallery2-2.jpg" alt="Reparación de Embarcaciones">
                     <h3>Reparación de Embarcaciones</h3>
-                    <p>Expertos en reparación y modificacion de embarcaciones. </p>
+                    <p>Expertos en reparación y modificación de embarcaciones. </p>
                 </div>
                 <div class="service">
                     <img src="img/RN00.jpg" alt="Estructuras y Componentes">

@@ -83,3 +83,32 @@ document.getElementById('menu-toggle').addEventListener('click', function () {
 Object.keys(galleryImages).forEach(galleryId => {
     resetAutoSwitch(galleryId);
 });
+
+// Mostrar y ocultar el reproductor de video con cambio de texto del botón
+const videoButton = document.getElementById('open-btn');
+const videoContainer = document.getElementById('video-container');
+const videoPlayer = document.getElementById('video-player');
+
+// Asegurar que el video esté oculto al cargar la página
+window.addEventListener('load', function() {
+    videoContainer.style.display = "none";
+    videoButton.textContent = "Ver Video";
+});
+
+videoButton.addEventListener('click', function() {
+    if (videoContainer.style.display === "none") {
+        videoContainer.style.display = "flex";
+        videoButton.textContent = "Ocultar Video";
+        videoPlayer.play(); // Reproducir el video automáticamente
+    } else {
+        videoContainer.style.display = "none";
+        videoButton.textContent = "Ver Video";
+        videoPlayer.pause(); // Pausar el video cuando se oculta el contenedor
+    }
+});
+
+document.getElementById('close-btn').addEventListener('click', function() {
+    videoContainer.style.display = "none";
+    videoButton.textContent = "Ver Video";
+    videoPlayer.pause(); // Pausar el video cuando se cierra el contenedor
+});

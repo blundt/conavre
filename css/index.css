@@ -21,6 +21,41 @@
     font-size: 1.2em;
 }
 
+/* Video Player Styles */
+#video-container {
+    display: none; /* Comenzar con display none */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
 /* Services Section Styles */
 #services {
     background: #fff;
@@ -214,5 +249,10 @@
 
     .gallery-item img {
         max-height: 150px; /* Ajusta la altura máxima en dispositivos más pequeños */
+    }
+
+    /* Estilos para el reproductor de video responsivo */
+    #video-container {
+        width: 90%;
     }
 }
