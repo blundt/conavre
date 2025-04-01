@@ -22,7 +22,7 @@
 }
 
 /* Video Player Styles */
-#video-container {
+.video-container {
     display: none; /* Comenzar con display none */
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@
     border-radius: 10px;
 }
 
-#video-container video {
+.video-container video {
     width: 100%;
     height: auto;
     border-radius: 10px;

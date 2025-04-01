@@ -89,26 +89,50 @@ const videoButton = document.getElementById('open-btn');
 const videoContainer = document.getElementById('video-container');
 const videoPlayer = document.getElementById('video-player');
 
-// Asegurar que el video esté oculto al cargar la página
+const videoButton2 = document.getElementById('open-btn-2');
+const videoContainer2 = document.getElementById('video-container-2');
+const videoPlayer2 = document.getElementById('video-player-2');
+
+// Asegurar que ambos videos estén ocultos al cargar la página
 window.addEventListener('load', function() {
     videoContainer.style.display = "none";
-    videoButton.textContent = "Ver Video";
+    videoButton.textContent = "Video C IV";
+
+    videoContainer2.style.display = "none";
+    videoButton2.textContent = "Video C VII";
 });
 
 videoButton.addEventListener('click', function() {
-    if (videoContainer.style.display === "none") {
+    if (videoContainer.style.display === "none" || videoContainer.style.display === "") {
         videoContainer.style.display = "flex";
         videoButton.textContent = "Ocultar Video";
-        videoPlayer.play(); // Reproducir el video automáticamente
+        videoPlayer.play();
+
+        // Ocultar segundo video si está abierto
+        videoContainer2.style.display = "none";
+        videoButton2.textContent = "Video C VII";
+        videoPlayer2.pause();
     } else {
         videoContainer.style.display = "none";
-        videoButton.textContent = "Ver Video";
-        videoPlayer.pause(); // Pausar el video cuando se oculta el contenedor
+        videoButton.textContent = "Video C IV";
+        videoPlayer.pause();
     }
 });
 
-document.getElementById('close-btn').addEventListener('click', function() {
-    videoContainer.style.display = "none";
-    videoButton.textContent = "Ver Video";
-    videoPlayer.pause(); // Pausar el video cuando se cierra el contenedor
+videoButton2.addEventListener('click', function() {
+    if (videoContainer2.style.display === "none" || videoContainer2.style.display === "") {
+        videoContainer2.style.display = "flex";
+        videoButton2.textContent = "Ocultar Segundo Video";
+        videoPlayer2.play();
+
+        // Ocultar primer video si está abierto
+        videoContainer.style.display = "none";
+        videoButton.textContent = "Video C IV";
+        videoPlayer.pause();
+    } else {
+        videoContainer2.style.display = "none";
+        videoButton2.textContent = "Video C VII";
+        videoPlayer2.pause();
+    }
 });
+
